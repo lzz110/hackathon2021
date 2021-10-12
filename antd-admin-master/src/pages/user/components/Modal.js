@@ -46,22 +46,22 @@ class UserModal extends PureComponent {
             label={t`Name`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
-          <FormItem name='nickName' rules={[{ required: true }]}
-            label={t`NickName`} hasFeedback {...formItemLayout}>
+          <FormItem name='alias' rules={[{ required: true }]}
+            label={t`alias`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
-          <FormItem name='isMale' rules={[{ required: true }]}
-            label={t`Gender`} hasFeedback {...formItemLayout}>
-            <Radio.Group>
-              <Radio value>
-                <Trans>Male</Trans>
-              </Radio>
-              <Radio value={false}>
-                <Trans>Female</Trans>
-              </Radio>
-            </Radio.Group>
-          </FormItem>
-          <FormItem name='age' label={t`Age`} hasFeedback {...formItemLayout}>
+          {/*<FormItem name='isMale' rules={[{ required: true }]}*/}
+          {/*  label={t`Gender`} hasFeedback {...formItemLayout}>*/}
+          {/*  <Radio.Group>*/}
+          {/*    <Radio value>*/}
+          {/*      <Trans>Male</Trans>*/}
+          {/*    </Radio>*/}
+          {/*    <Radio value={false}>*/}
+          {/*      <Trans>Female</Trans>*/}
+          {/*    </Radio>*/}
+          {/*  </Radio.Group>*/}
+          {/*</FormItem>*/}
+          <FormItem name='work' label={t`Work`} hasFeedback {...formItemLayout}>
             <InputNumber min={18} max={100} />
           </FormItem>
           <FormItem name='phone' rules={[{ required: true, pattern: /^1[34578]\d{9}$/, message: t`The input is not valid phone!`, }]}
@@ -72,14 +72,14 @@ class UserModal extends PureComponent {
             label={t`Email`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
-          <FormItem name='address' rules={[{ required: true, }]}
-            label={t`Address`} hasFeedback {...formItemLayout}>
-            <Cascader
-              style={{ width: '100%' }}
-              options={city}
-              placeholder={t`Pick an address`}
-            />
-          </FormItem>
+          {/*<FormItem name='address' rules={[{ required: true, }]}*/}
+          {/*  label={t`Address`} hasFeedback {...formItemLayout}>*/}
+          {/*  <Cascader*/}
+          {/*    style={{ width: '100%' }}*/}
+          {/*    options={city}*/}
+          {/*    placeholder={t`Pick an address`}*/}
+          {/*  />*/}
+          {/*</FormItem>*/}
         </Form>
       </Modal>
     )

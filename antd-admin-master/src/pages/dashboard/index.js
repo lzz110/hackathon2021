@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'umi'
-import { Row, Col, Card } from 'antd'
+import { Row, Col, Card, Radio } from 'antd'
 import { Color } from 'utils'
 import { Page, ScrollBar } from 'components'
 import {
@@ -15,10 +15,13 @@ import {
   Browser,
   Cpu,
   User,
+  HighstockComponent
 } from './components'
 import styles from './index.less'
 import store from 'store'
+import HighChartsComponent from '../chart/highCharts/HighChartsComponent'
 
+const RadioGroup = Radio.Group
 const bodyStyle = {
   bodyStyle: {
     height: 432,
@@ -26,11 +29,41 @@ const bodyStyle = {
   },
 }
 
+const chartList = [
+  {
+    label: 'Highstock',
+    value: 'Highstock',
+  },
+  {
+    label: 'Highmaps',
+    value: 'Highmaps',
+  },
+  {
+    label: 'HighMore',
+    value: 'HighMore',
+  },
+]
+
+
 @connect(({ app, dashboard, loading }) => ({
   dashboard,
   loading,
 }))
 class Dashboard extends PureComponent {
+
+  constructor() {
+    super()
+    this.state = {
+      type: '',
+    }
+    this.handleRadioGroupChange = this.handleRadioGroupChange.bind(this)
+  }
+  handleRadioGroupChange(e) {
+    this.setState({
+      type: e.target.value,
+    })
+  }
+
   render() {
     const userDetail = store.get('user')
     const { avatar, username } = userDetail
@@ -46,6 +79,7 @@ class Dashboard extends PureComponent {
       browser,
       cpu,
       user,
+      highstockcomponent
     } = dashboard
 
     const numberCards = numbers.map((item, key) => (
@@ -62,14 +96,17 @@ class Dashboard extends PureComponent {
         <Row gutter={24}>
           {numberCards}
           <Col lg={24} md={24}>
-            <Card
-              bordered={false}
-              bodyStyle={{
-                padding: '24px 36px 24px 0',
-              }}
-            >
-              <Sales data={sales} />
-            </Card>
+            {/*<Card*/}
+            {/*  bordered={false}*/}
+            {/*  bodyStyle={{*/}
+            {/*    padding: '24px 36px 24px 0',*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <Sales data={sales} />*/}
+            {/*</Card>*/}
+            <div className={styles.chart}>
+              <HighChartsComponent type={this.state.type} />
+            </div>
           </Col>
           {/*<Col lg={6} md={24}>*/}
           {/*  <Row gutter={24}>*/}
@@ -148,6 +185,9 @@ class Dashboard extends PureComponent {
           {/*    <User {...user} avatar={avatar} username={username} />*/}
           {/*  </Card>*/}
           {/*</Col>*/}
+
+
+
         </Row>
       </Page>
     )

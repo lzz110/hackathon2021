@@ -11,48 +11,48 @@ const Dashboard = Mock.mock({
       'Electronics|300-550': 1,
     },
   ],
-  cpu: {
-    'usage|50-600': 1,
-    space: 825,
-    'cpu|40-90': 1,
-    'data|20': [
-      {
-        'cpu|20-80': 1,
-      },
-    ],
-  },
-  browser: [
-    {
-      name: 'Google Chrome',
-      percent: 43.3,
-      status: 1,
-    },
-    {
-      name: 'Mozilla Firefox',
-      percent: 33.4,
-      status: 2,
-    },
-    {
-      name: 'Apple Safari',
-      percent: 34.6,
-      status: 3,
-    },
-    {
-      name: 'Internet Explorer',
-      percent: 12.3,
-      status: 4,
-    },
-    {
-      name: 'Opera Mini',
-      percent: 3.3,
-      status: 1,
-    },
-    {
-      name: 'Chromium',
-      percent: 2.53,
-      status: 1,
-    },
-  ],
+  // cpu: {
+  //   'usage|50-600': 1,
+  //   space: 825,
+  //   'cpu|40-90': 1,
+  //   'data|20': [
+  //     {
+  //       'cpu|20-80': 1,
+  //     },
+  //   ],
+  // },
+  // browser: [
+  //   {
+  //     name: 'Google Chrome',
+  //     percent: 43.3,
+  //     status: 1,
+  //   },
+  //   {
+  //     name: 'Mozilla Firefox',
+  //     percent: 33.4,
+  //     status: 2,
+  //   },
+  //   {
+  //     name: 'Apple Safari',
+  //     percent: 34.6,
+  //     status: 3,
+  //   },
+  //   {
+  //     name: 'Internet Explorer',
+  //     percent: 12.3,
+  //     status: 4,
+  //   },
+  //   {
+  //     name: 'Opera Mini',
+  //     percent: 3.3,
+  //     status: 1,
+  //   },
+  //   {
+  //     name: 'Chromium',
+  //     percent: 2.53,
+  //     status: 1,
+  //   },
+  // ],
   user: {
     name: 'github',
     sales: 3241,

@@ -14,19 +14,19 @@ const database = [
     },
     route: '/dashboard',
   },
-  // {
-  //   id: '2',
-  //   breadcrumbParentId: '1',
-  //   name: 'Users',
-  //   zh: {
-  //     name: '用户管理'
-  //   },
-  //   'pt-br': {
-  //     name: 'Usuário'
-  //   },
-  //   icon: 'user',
-  //   route: '/user',
-  // },
+  {
+    id: '2',
+    breadcrumbParentId: '1',
+    name: 'Users',
+    zh: {
+      name: '用户管理'
+    },
+    'pt-br': {
+      name: 'Usuário'
+    },
+    icon: 'user',
+    route: '/user',
+  },
   // {
   //   id: '7',
   //   breadcrumbParentId: '1',

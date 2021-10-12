@@ -30,6 +30,12 @@ class List extends PureComponent {
 
     const columns = [
       {
+        title: <Trans>Rank</Trans>,
+        dataIndex: 'rank',
+        key: 'rank',
+        width: '5%'
+      },
+      {
         title: <Trans>Avatar</Trans>,
         dataIndex: 'avatar',
         key: 'avatar',
@@ -42,61 +48,91 @@ class List extends PureComponent {
         dataIndex: 'name',
         key: 'name',
         render: (text, record) => <Link to={`user/${record.id}`}>{text}</Link>,
+        width: '11%',
       },
       {
-        title: <Trans>NickName</Trans>,
-        dataIndex: 'nickName',
-        key: 'nickName',
-      },
-      {
-        title: <Trans>Age</Trans>,
-        dataIndex: 'age',
-        width: '6%',
-        key: 'age',
-      },
-      {
-        title: <Trans>Gender</Trans>,
-        dataIndex: 'isMale',
-        key: 'isMale',
+        title: <Trans>Alias</Trans>,
+        dataIndex: 'alias',
+        key: 'alias',
         width: '7%',
-        render: text => <span>{text ? 'Male' : 'Female'}</span>,
       },
+      {
+        title: <Trans>Core Center</Trans>,
+        dataIndex: 'corecenter',
+        key: 'corecenter',
+        width: '10%',
+      },
+      // {
+      //   title: <Trans>Age</Trans>,
+      //   dataIndex: 'age',
+      //   width: '6%',
+      //   key: 'age',
+      // },
+      // {
+      //   title: <Trans>Gender</Trans>,
+      //   dataIndex: 'isMale',
+      //   key: 'isMale',
+      //   width: '7%',
+      //   render: text => <span>{text ? 'Male' : 'Female'}</span>,
+      // },
       {
         title: <Trans>Phone</Trans>,
         dataIndex: 'phone',
         key: 'phone',
+        width: '9%',
       },
       {
         title: <Trans>Email</Trans>,
         dataIndex: 'email',
         key: 'email',
+        width: '15%',
+      },
+      // {
+      //   title: <Trans>Address</Trans>,
+      //   dataIndex: 'address',
+      //   key: 'address',
+      // },
+      // {
+      //   title: <Trans>CreateTime</Trans>,
+      //   dataIndex: 'createTime',
+      //   key: 'createTime',
+      // },
+      // {
+      //   title: <Trans>Operation</Trans>,
+      //   key: 'operation',
+      //   fixed: 'right',
+      //   width: '8%',
+      //   render: (text, record) => {
+      //     return (
+      //       <DropOption
+      //         onMenuClick={e => this.handleMenuClick(record, e)}
+      //         menuOptions={[
+      //           { key: '1', name: t`Update` },
+      //           { key: '2', name: t`Delete` },
+      //         ]}
+      //       />
+      //     )
+      //   },
+      // },
+      {
+        title: <Trans>Work</Trans>,
+        dataIndex: 'work',
+        key: 'work',
       },
       {
-        title: <Trans>Address</Trans>,
-        dataIndex: 'address',
-        key: 'address',
+        title: <Trans>Commute</Trans>,
+        dataIndex: 'commute',
+        key: 'commute',
       },
       {
-        title: <Trans>CreateTime</Trans>,
-        dataIndex: 'createTime',
-        key: 'createTime',
+        title: <Trans>Trip</Trans>,
+        dataIndex: 'trip',
+        key: 'trip',
       },
       {
-        title: <Trans>Operation</Trans>,
-        key: 'operation',
-        fixed: 'right',
-        width: '8%',
-        render: (text, record) => {
-          return (
-            <DropOption
-              onMenuClick={e => this.handleMenuClick(record, e)}
-              menuOptions={[
-                { key: '1', name: t`Update` },
-                { key: '2', name: t`Delete` },
-              ]}
-            />
-          )
-        },
+        title: <Trans>Summary</Trans>,
+        dataIndex: 'summary',
+        key: 'summary',
       },
     ]
 

@@ -8,13 +8,13 @@ let usersListData = Mock.mock({
     {
       id: '@id',
       name: '@name',
-      nickName: '@last',
+      alias: '@last',
       phone: /^1[34578]\d{9}$/,
       'age|11-99': 1,
-      address: '@county(true)',
+      // address: '@county(true)',
       isMale: '@boolean',
       email: '@email',
-      createTime: '@datetime',
+      // createTime: '@datetime',
       avatar() {
         return randomAvatar()
       },

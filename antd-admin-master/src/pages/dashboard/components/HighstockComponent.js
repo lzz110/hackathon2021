@@ -83,7 +83,7 @@ const config = {
   },
   series: [
     {
-      name: 'AAPL',
+      name: 'AAPdddL',
       data,
       tooltip: {
         valueDecimals: 2,

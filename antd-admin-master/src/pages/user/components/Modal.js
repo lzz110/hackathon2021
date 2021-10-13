@@ -42,12 +42,22 @@ class UserModal extends PureComponent {
     return (
       <Modal {...modalProps} onOk={this.handleOk}>
         <Form ref={this.formRef} name="control-ref" initialValues={{ ...item, address: item.address && item.address.split(' ') }} layout="horizontal">
+
+          <FormItem name='mode' rules={[{ required: true }]}
+                    label={t`Mode`} hasFeedback {...formItemLayout}>
+            <Radio.Group>
+              <Radio.Button value="optional">Commute</Radio.Button>
+              <Radio.Button value>Work</Radio.Button>
+              <Radio.Button value={false}>Business Trip</Radio.Button>
+            </Radio.Group>
+          </FormItem>
+
           <FormItem name='name' rules={[{ required: true }]}
-            label={t`Name`} hasFeedback {...formItemLayout}>
+            label={t`Time`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
           <FormItem name='alias' rules={[{ required: true }]}
-            label={t`alias`} hasFeedback {...formItemLayout}>
+            label={t`Distance`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
           {/*<FormItem name='isMale' rules={[{ required: true }]}*/}
@@ -61,15 +71,16 @@ class UserModal extends PureComponent {
           {/*    </Radio>*/}
           {/*  </Radio.Group>*/}
           {/*</FormItem>*/}
-          <FormItem name='work' label={t`Work`} hasFeedback {...formItemLayout}>
-            <InputNumber min={18} max={100} />
+
+          <FormItem name='work' label={t`Elevator`} hasFeedback {...formItemLayout}>
+            <InputNumber min={1} max={18} />
           </FormItem>
           <FormItem name='phone' rules={[{ required: true, pattern: /^1[34578]\d{9}$/, message: t`The input is not valid phone!`, }]}
-            label={t`Phone`} hasFeedback {...formItemLayout}>
+            label={t`Start Point`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
           <FormItem name='email' rules={[{ required: true, pattern: /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/, message: t`The input is not valid E-mail!`, }]}
-            label={t`Email`} hasFeedback {...formItemLayout}>
+            label={t`End Point`} hasFeedback {...formItemLayout}>
             <Input />
           </FormItem>
           {/*<FormItem name='address' rules={[{ required: true, }]}*/}

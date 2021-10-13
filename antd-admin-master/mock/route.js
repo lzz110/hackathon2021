@@ -27,6 +27,19 @@ const database = [
     icon: 'user',
     route: '/user',
   },
+  {
+    id: '7',
+    breadcrumbParentId: '1',
+    name: 'teams',
+    zh: {
+      name: '组管理'
+    },
+    'pt-br': {
+      name: 'Usuário'
+    },
+    icon: 'team',
+    route: '/team',
+  },
   // {
   //   id: '7',
   //   breadcrumbParentId: '1',
@@ -103,49 +116,50 @@ const database = [
       name: 'Graficos'
     },
     icon: 'code-o',
+    route: '/chart/Recharts'
   },
-  {
-    id: '51',
-    breadcrumbParentId: '5',
-    menuParentId: '5',
-    name: 'ECharts',
-    zh: {
-      name: 'ECharts'
-    },
-    'pt-br': {
-      name: 'ECharts'
-    },
-    icon: 'line-chart',
-    route: '/chart/ECharts',
-  },
-  {
-    id: '52',
-    breadcrumbParentId: '5',
-    menuParentId: '5',
-    name: 'HighCharts',
-    zh: {
-      name: 'HighCharts'
-    },
-    'pt-br': {
-      name: 'HighCharts'
-    },
-    icon: 'bar-chart',
-    route: '/chart/highCharts',
-  },
-  {
-    id: '53',
-    breadcrumbParentId: '5',
-    menuParentId: '5',
-    name: 'Rechartst',
-    zh: {
-      name: 'Rechartst'
-    },
-    'pt-br': {
-      name: 'Rechartst'
-    },
-    icon: 'area-chart',
-    route: '/chart/Recharts',
-  },
+  // {
+  //   id: '51',
+  //   breadcrumbParentId: '5',
+  //   menuParentId: '5',
+  //   name: 'ECharts',
+  //   zh: {
+  //     name: 'ECharts'
+  //   },
+  //   'pt-br': {
+  //     name: 'ECharts'
+  //   },
+  //   icon: 'line-chart',
+  //   route: '/chart/ECharts',
+  // },
+  // {
+  //   id: '51',
+  //   breadcrumbParentId: '5',
+  //   menuParentId: '5',
+  //   name: 'HighCharts',
+  //   zh: {
+  //     name: 'HighCharts'
+  //   },
+  //   'pt-br': {
+  //     name: 'HighCharts'
+  //   },
+  //   icon: 'bar-chart',
+  //   route: '/chart/highCharts',
+  // },
+  // {
+  //   id: '51',
+  //   breadcrumbParentId: '5',
+  //   menuParentId: '5',
+  //   name: 'Rechartst',
+  //   zh: {
+  //     name: 'Rechartst'
+  //   },
+  //   'pt-br': {
+  //     name: 'Rechartst'
+  //   },
+  //   icon: 'area-chart',
+  //   route: '/chart/Recharts',
+  // },
 ]
 
 module.exports = {

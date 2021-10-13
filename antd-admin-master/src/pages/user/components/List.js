@@ -87,6 +87,7 @@ class List extends PureComponent {
         key: 'email',
         width: '15%',
       },
+
       // {
       //   title: <Trans>Address</Trans>,
       //   dataIndex: 'address',

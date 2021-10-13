@@ -93,6 +93,9 @@ class Dashboard extends PureComponent {
         // loading={loading.models.dashboard && sales.length === 0}
         className={styles.dashboard}
       >
+        <div id="div1">
+          <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWFU0t?ver=f6fb&amp" width={1620} height={760} />
+        </div>
         <Row gutter={24}>
           {numberCards}
           <Col lg={24} md={24}>
@@ -104,6 +107,7 @@ class Dashboard extends PureComponent {
             {/*>*/}
             {/*  <Sales data={sales} />*/}
             {/*</Card>*/}
+
             <div className={styles.chart}>
               <HighChartsComponent type={this.state.type} />
             </div>

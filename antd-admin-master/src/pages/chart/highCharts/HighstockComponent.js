@@ -79,7 +79,7 @@ const config = {
     selected: 1,
   },
   title: {
-    text: 'AAPL Stock Price',
+    text: 'Emission Summary',
   },
   series: [
     {
